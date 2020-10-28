@@ -1,0 +1,161 @@
+h1{
+    color: darkslategray;
+    text-align: center;
+}
+/* The sidebar menu */
+.sidenavlinks {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 240px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+
+}
+
+/* The navigation menu links */
+.sidenavlinks a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavlinks a:hover {
+    color: #f1f1f1;
+}
+
+/* The sidebar menu */
+.sidenavrechts {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 240px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+
+}
+
+/* The navigation menu links */
+.sidenavrechts a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavrechts a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 240px; /* Same as the width of the sidebar */
+    margin-right: 240px;
+    padding: 0 10px;
+}
+.main table, th, td{
+    border: 1px solid #111111;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+    padding: 15px;
+}
+th, td {
+    padding: 15px;
+}
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    width: 33.33%;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+.cor-home-side-ad {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: auto;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-width: 140px;
+    min-height: 1200px;
+    max-height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+.cor-home-side-ad .cor-home-side-ad__image {
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.cor-home-side-ad .cor-home-side-ad__html {
+    position: relative;
+    z-index: 1;
+}
+img, svg {
+    vertical-align: middle;
+}
+img {
+    border-style: none;
+}
+.custom-campaign-left{
+    margin-top: 50px;
+    text-align: center;
+    width: 160px;
+}
+.custom-campaign-left .cor-button{
+    display: inline-block;
+}
+.custom-campaign-right {
+    margin-top: 50px;
+    text-align: center;
+    width: 160px;
+}
+.custom-campaign-right .cor-button {
+    display: inline-block;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenavlinks {padding-top: 15px;}
+    .sidenavlinks a {font-size: 18px;}
+    .sidenavrechts {padding-top: 15px;}
+    .sidenavrechts a {font-size: 18px;}
+}
