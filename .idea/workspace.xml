@@ -28,8 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6950e86a-99d0-45a4-94fd-deae5aa96229" name="Default Changelist" comment="&#10;Profiel 3e versie">
-      <change beforePath="$PROJECT_DIR$/.idea/Profiel 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Profiel2.html" afterDir="false" />
+    <list default="true" id="6950e86a-99d0-45a4-94fd-deae5aa96229" name="Default Changelist" comment="Profiel 4e versie">
+      <change afterPath="$PROJECT_DIR$/.idea/Profiel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Profiel4clean.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/resultaten.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/resultaten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -42,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -62,21 +64,21 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,7 +87,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f0d4369e-3cea-4950-8bbe-d6951d6a55d6" name="Default Changelist" comment="" />
+      <changelist id="6950e86a-99d0-45a4-94fd-deae5aa96229" name="Default Changelist" comment="Profiel 4e versie" />
       <created>1603719628329</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -93,6 +95,8 @@
       <workItem from="1603719629365" duration="790000" />
       <workItem from="1603720422354" duration="4403000" />
       <workItem from="1603724841207" duration="7011000" />
+      <workItem from="1603901540690" duration="807000" />
+      <workItem from="1603904650214" duration="9145000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1603719851959</created>
@@ -101,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603719851959</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Profiel 4e versie">
+      <created>1603895274454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603895274454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +133,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="teste" />
     <MESSAGE value="Profiel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profiel" />
+    <MESSAGE value="Profiel 4e versie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profiel 4e versie" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603723265062">
@@ -133,10 +145,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603727650535" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603719879593">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603895288665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603719879593" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603895288665" />
     <state x="0" y="0" width="1125" height="810" key="dock-window-1" timestamp="1603722286621">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -145,6 +157,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1603723303002" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603918178932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603918178932" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603727648597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
