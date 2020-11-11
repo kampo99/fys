@@ -161,7 +161,7 @@ small {
 }
 
 .col-4 {
-    flex-basis: 15%;
+    flex-basis: 20%;
 }
 
 @media all and (max-width: 767px) {
@@ -199,6 +199,7 @@ h2 {
 small {
     font-size: 0.5em;
 }
+
 .container .responsive-table .table-row button {
     background-color: #26A514; /* Green background */
     border: 1px solid #666666; /* Green border */
@@ -217,13 +218,14 @@ small {
     content: "";
     clear: both;
     display: table;
+
 }
 
 /* Add a background color on hover */
-.container .responsive-table .table-row button:hover {
-    background-color: #3e8e41;
-    font-family: monospace;
-}
+/*.container .responsive-table .table-row button:hover {*/
+/*    background-color: #3e8e41;*/
+/*    font-family: monospace;*/
+/*}*/
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenavlinks {padding-top: 15px;}
