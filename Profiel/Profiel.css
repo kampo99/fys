@@ -1,7 +1,7 @@
 
 h1, h3 {
     color: white;
-    text-align: left;
+    text-align: center;
 }
 
 p {
@@ -67,7 +67,7 @@ body {
 }
 
 .info {
-    width: 40%;
+    width: 20%;
     background-color: #D81E05;
     position: absolute;
     bottom: 15%;
@@ -76,7 +76,24 @@ body {
     border-style: solid;
     border-color: #666666;
     border-width: 5px;
+    visibility: hidden;
 }
+
+.button{
+    position: absolute;
+    left: 16%;
+    border-width: 5px;
+    bottom: 15%;
+    width: 20%;
+    background-color: #D81E05;
+    color: white;
+    height: 10%;
+}
+
+
+
+
+
 
 .sluiten {
     position: absolute;
@@ -87,6 +104,10 @@ body {
     border-color: #666666;
     border-width: 5px;
 }
+
+
+
+
 
 /* The sidebar menu */
 .sidenavlinks {
