@@ -74,10 +74,21 @@
     </p>
 </div>
 
+<!-- button -->
+<script>
+    function textLatenZien(button){
+        document.getElementById("boxtext").style.visibility = "visible";
+        button.style.visibility="hidden";
+    }
+</script>
+
+<button class="button" onclick="textLatenZien(this)">Match aanvraag</button>
+
+
 <!--Info email -->
-<div class="info">
+<div class="info" id="boxtext">
     <h3>
-        Info zoals mailen, status en blokeren
+        Pending
     </h3>
 </div>
 
