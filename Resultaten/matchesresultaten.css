@@ -71,6 +71,23 @@ table{
 th, td {
     padding: 15px;
 }
+.HomeButton {
+    background-color: #26A514;
+    font-family: Uni Sans WFx,sans-serif;
+    font-weight: 400;
+    color: white;
+    padding: 0.5% 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: fixed;
+    font-size: 30px;
+    border: 5px solid #000;
+}
+.HomeButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
 .cor-home-side-ad {
     -ms-flex-align: start;
     align-items: flex-start;
