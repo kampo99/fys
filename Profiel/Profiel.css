@@ -90,6 +90,25 @@ body {
     height: 10%;
 }
 
+.HomeButton {
+    background-color: #26A514;
+    font-family: Uni Sans WFx,sans-serif;
+    font-weight: 400;
+    color: white;
+    padding: 0.5% 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    right: 23%;
+    top: 0;
+    position: fixed;
+    font-size: 30px;
+    border: 5px solid #000;
+}
+.HomeButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
 
 
 
