@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Resultaten</title>
     <link rel="stylesheet" href="matchesresultaten.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -53,26 +54,26 @@
     <div class="container">
         <ul class="responsive-table">
             <li class="table-row">
-                <div class="col col-1" data-label="Name"><a href="../Profiel/Profiel4clean.html">Persoon 1</a></div>
+                <div class="col col-1" data-label="Name"><i class="fa fa-star" style="font-size:20px"></i><a href="../Profiel/ProfielNiki.html">Niki</a></div>
                 <div class="col col-2" data-label="button1">
                     <button id="request1" onclick="myFunction()">
-                        Matching Request
+                        Ask for match
                     </button>
                 </div>
             </li>
             <li class="table-row">
-                <div class="col col-1" data-label="Name">Persoon 2</div>
+                <div class="col col-1" data-label="Name"><a href="../Profiel/ProfielLara.html">Lara</a></div>
                 <div class="col col-2" data-label="button1">
                     <button id="request2" onclick="myFunction()">
-                        Matching Request
+                        Pending...
                     </button>
                 </div>
             </li>
             <li class="table-row">
-                <div class="col col-1" data-label="Name">Persoon 3</div>
+                <div class="col col-1" data-label="Name"><a href="../Profiel/ProfielYoussra.html">Youssra</a></div>
                 <div class="col col-2" data-label="button1">
                     <button id="request3" onclick="myFunction()">
-                        Matching Request
+                        Accept matching request
                     </button>
                 </div>
             </li>
@@ -121,11 +122,8 @@
     document.getElementById('request1').onclick = function() {
         this.textContent = 'Pending...';
     }
-    document.getElementById('request2').onclick = function() {
-        this.textContent = 'Pending...';
-    }
     document.getElementById('request3').onclick = function() {
-        this.textContent = 'Pending...';
+        this.textContent = 'youssra69@gmail.com';
     }
 </script>
 </body>

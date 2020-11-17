@@ -235,9 +235,13 @@ small {
     content: "";
     clear: both;
     display: table;
-
 }
-
+.table-row i{
+    padding-right: 5px;
+}
+#request2{
+    cursor: default;
+}
 /* Add a background color on hover */
 /*.container .responsive-table .table-row button:hover {*/
 /*    background-color: #3e8e41;*/
