@@ -1,20 +1,19 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profiel</title>
-    <link rel="stylesheet" href="Profiel.css">
-
-
+    <title>Resultaten</title>
+    <link rel="stylesheet" href="assets/css/pages/matchesresultaten.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<!--Banner links -->
+
+<!-- Side navigation -->
 <div class="sidenavlinks">
     <div class="cor-ad-container cor-ad-container--left">
         <div class="cor-home-side-ad">
             <div class="cor-home-side-ad__image"
-                 style="background-image:url('https://images.corendon.nl/NL/hpto/homepage/CW_Achtergrond-800x1200_LINKS.png');background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;">
+                 style="background-image:url('https://images.corendon.nl/NL/hpto/homepage/CW_Achtergrond-800x1200_LINKS.png');">
             </div>
             <div class="cor-home-side-ad__html">
                 <div>
@@ -38,6 +37,7 @@
 
                         </a>
 
+
                     </div>
                 </div>
             </div>
@@ -45,74 +45,49 @@
     </div>
 </div>
 
+<!-- Page content -->
+<div class="main">
+    <form action="reiskeuze.html">
+        <button class="HomeButton">Home</button>
+    </form>
+    <h1>Matches</h1>
+    <div class="container">
+        <ul class="responsive-table">
+            <li class="table-row">
+                <div class="col col-1" data-label="Name"><i class="fa fa-star" style="font-size:20px"></i><a href="ProfielNiki.html">Niki</a></div>
+                <div class="col col-2" data-label="button1">
+                    <button id="request1" onclick="myFunction()">
+                        Ask for match
+                    </button>
+                </div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Name"><a href="ProfielLara.html">Lara</a></div>
+                <div class="col col-2" data-label="button1">
+                    <button id="request2" onclick="myFunction()">
+                        Pending...
+                    </button>
+                </div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Name"><a href="ProfielYoussra.html">Youssra</a></div>
+                <div class="col col-2" data-label="button1">
+                    <button id="request3" onclick="myFunction()">
+                        Accept matching request
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-
-
-
-<!--header naam -->
-<div class="naam">
-    <h1>
-        Naam:
-    </h1>
 </div>
 
-<!--Profiel foto -->
-<div class="foto">
-    <img src="https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd" alt="Profiel foto"
-         style="width:350px;height:200px;">
-</div>
-
-<!--Bio -->
-<div class="biohoofd">
-    <h1>
-        Bio van persoon:
-    </h1>
-</div>
-<div class="biosub">
-    <p>
-        Een korte bio over de persoon
-    </p>
-</div>
-
-<!-- button -->
-<script>
-    function textLatenZien(button){
-        document.getElementById("boxtext").style.visibility = "visible";
-        button.style.visibility="hidden";
-    }
-</script>
-
-<button class="button" onclick="textLatenZien(this)">Match aanvraag</button>
-
-
-<!--Info email -->
-<div class="info" id="boxtext">
-    <h3>
-        Pending
-    </h3>
-</div>
-
-<!--Sluiten -->
-<div class="sluiten">
-    <h1>
-        <a href="../Resultaten/matchesresultaten.html">Sluiten</a>
-    </h1>
-</div>
-
-<!-- home knop -->
-<form action="../Reiskeuze/reiskeuze.html">
-    <button class="HomeButton">Home</button>
-</form>
-
-<!--Banner rechts -->
 <div class="sidenavrechts">
 
     <div class="cor-ad-container cor-ad-container--right">
         <div class="cor-home-side-ad">
             <div class="cor-home-side-ad__image"
-                 style="background-image:url('https://images.corendon.nl/NL/hpto/homepage/CW_Achtergrond-800x1200_LINKS.png');background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size:100% 100%;">
+                 style="background-image:url('http://images.corendon.nl/NL/hpto/homepage/CW_Achtergrond-800x1200_RECHTS.png');">
             </div>
             <div class="cor-home-side-ad__html">
                 <div>
@@ -143,6 +118,13 @@
     </div>
 
 </div>
-
-
+<script>
+    document.getElementById('request1').onclick = function() {
+        this.textContent = 'Pending...';
+    }
+    document.getElementById('request3').onclick = function() {
+        this.textContent = 'youssra@gmail.com';
+    }
+</script>
 </body>
+</html>
