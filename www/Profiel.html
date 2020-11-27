@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/css/pages/template.css">
+    <link rel="stylesheet" href="assets/css/pages/Profiel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+<body>
+<div class="middleBox">
+    <div class="naam">
+        <h1>
+            <i class="fa fa-star" style="font-size:24px"></i>
+            Niki
+        </h1>
+    </div>
+    <div class="foto">
+        <img src="https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd" alt="Profiel foto"
+             style="width:400px;height:220px;">
+    </div>
+    <div class="biohoofd">
+        <h1>
+            Bio van persoon:
+        </h1>
+    </div>
+    <div class="biosub">
+        <p>
+            Een korte bio over de persoon
+        </p>
+    </div>
+    <script>
+        function textLatenZien(button){
+            document.getElementById("boxtext").style.visibility = "visible";
+            button.style.visibility="hidden";
+        }
+    </script>
+
+    <button class="aanvraag" onclick="textLatenZien(this)">
+        <h3>
+            Match aanvraag
+        </h3>
+    </button>
+
+    <div class="info" id="boxtext">
+        <h3>
+            In afwachting
+        </h3>
+    </div>
+
+
+
+    <div class="headerBox">
+        <form action="matchesresultaten.html">
+            <button class="sluiten">Sluiten</button>
+        </form>
+
+        <form action="reiskeuze.html">
+            <button class="HomeButton">Home</button>
+        </form>
+        <div id="headerText">Profiel</div>
+    </div>
+</div>
+<img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
+<img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerRight" class="right-banner" onclick="window.open('https://www.corendon.nl')">
+</body>
+</html>
