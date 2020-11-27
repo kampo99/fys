@@ -6,57 +6,68 @@
     height: 10%;
     top: 12%;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
+    color: white;
+    border-color: black;
+    margin: 20px;
 }
 
 .foto {
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 25%;
+    left: 0%;
     margin: 20px;
     border-style: solid;
-    border-color: #666666;
-    border-width: 5px;
+    border-color: black;
+    border-width: 2px;
+
 }
 
 .biohoofd {
     position: absolute;
-    bottom: 45%;
-    left: 16%;
-    right: 60%;
+    bottom: 30%;
+    left: 0%;
+    right: 70%;
     float: left;
     background-color: #D81E05;
     text-align: center;
     border-style: solid;
-    border-color: #666666;
-    border-width: 5px;
+    border-width: 2px;
+    color: white;
+    border-color: black;
+    margin: 20px;
 }
 
 .biosub {
     position: absolute;
-    bottom: 35%;
-    left: 16%;
+    bottom: 20%;
+    left: 0%;
     right: 35%;
     float: left;
     background-color: white;
     border-style: solid;
     border-color: #D81E05;
-    border-width: 5px;
+    border-width: 2px;
     text-align: justify;
+    margin: 20px;
 }
 
 .info {
+    height: 10%;
     width: 20%;
     background-color: #D81E05;
     position: absolute;
-    bottom: 15%;
-    left: 16%;
+    bottom: 5%;
+    left: 0%;
     text-align: center;
     border-style: solid;
-    border-color: #666666;
-    border-width: 5px;
+    border-color: black;
+    border-width: 2px;
+    margin: 20px;
+    color: white;
     visibility: hidden;
 }
+
 .sluiten {
     width: 20%;
     padding: 0.5% 1%;
@@ -65,4 +76,19 @@
     right: 0%;
     height: 100%;
     font-size: 30px;
+}
+
+.aanvraag{
+    height: 10%;
+    width: 20%;
+    background-color: #D81E05;
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 20px;
+    color: white;
 }
