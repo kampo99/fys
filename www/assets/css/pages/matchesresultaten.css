@@ -1,12 +1,12 @@
 @font-face {
     font-family: cantarell;
-    src: url("fonts/Cantarell-Regular.ttf") format("opentype");
+    src: url('../../../assets/fonts/Cantarell-Regular.ttf') format("opentype");
 }
 html{
     height: 99%;
 }
 body{
-    font-family: Uni Sans WFx,sans-serif;
+    font-family: cantarell,sans-serif;
     font-weight: normal;
     font-style: normal;
     background-image: url("https://images8.alphacoders.com/658/thumb-1920-658668.jpg");
@@ -16,7 +16,7 @@ body{
     height: 99%;
 }
 button {
-    font-family: Uni Sans WFx,sans-serif;
+    font-family: cantarell,sans-serif;
     background-color: #d81e05;
     color: white;
     text-align: center;
@@ -73,7 +73,6 @@ div.headerBox {
     font-size: 50px;
     color: white;
     text-align: center;
-    padding-top: 1%;
 }
 .middleBox .main {
     /*margin-left: 240px; !* Same as the width of the sidebar *!*/
