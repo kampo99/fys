@@ -31,7 +31,6 @@ button:hover {
   padding: 0.5% 1%;
   display: inline-block;
   position: absolute;
-  left: 0%;
   height: 100%;
   font-size: 30px;
 }
@@ -66,20 +65,9 @@ div.headerBox {
   height: 10%;
   margin: 0;
   position: absolute;
-  top: 0%;
 }
 #headerText {
   font-size: 50px;
   color: white;
-  display: block;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-  top: 15%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 30%;
-  height: 8%;
 }
