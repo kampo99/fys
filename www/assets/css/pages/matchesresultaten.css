@@ -1,64 +1,85 @@
-h1{
-    color: #666666;
+@font-face {
+    font-family: cantarell;
+    src: url("fonts/Cantarell-Regular.ttf") format("opentype");
+}
+html{
+    height: 99%;
+}
+body{
+    font-family: Uni Sans WFx,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background-image: url("https://images8.alphacoders.com/658/thumb-1920-658668.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 99%;
+}
+button {
+    font-family: Uni Sans WFx,sans-serif;
+    background-color: #d81e05;
+    color: white;
     text-align: center;
+    border: 2px solid #000;
 }
-/* The sidebar menu */
-.sidenavlinks {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 240px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-
+button:hover {
+    background-color: #8b0000;
+    color: white;
 }
-
-/* The navigation menu links */
-.sidenavlinks a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+.HomeButton {
+    width: 20%;
+    padding: 0.5% 1%;
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    font-size: 30px;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenavlinks a:hover {
-    color: #f1f1f1;
+.left-banner {
+    width: 7.5%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 12.5%;
 }
-
-/* The sidebar menu */
-.sidenavrechts {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 240px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #111; /* Black */
-
+.right-banner {
+    width: 7.5%;
+    margin-top: 12.5%;
+    float: right;
+    margin-right: 5%;
 }
-
-/* The navigation menu links */
-.sidenavrechts a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+div.middleBox {
+    background-color: white;
+    border: 3px solid black;
+    width: 50%;
+    height: 80%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenavrechts a:hover {
-    color: #f1f1f1;
+div.headerBox {
+    background-color: #d81e05;
+    border: 3px solid black;
+    width: 99.5%;
+    height: 10%;
+    margin: 0;
+    position: absolute;
+    top: 0%;
 }
-
-/* Style page content */
-.main {
-    margin-left: 240px; /* Same as the width of the sidebar */
-    margin-right: 240px;
+#headerText {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+.middleBox .main {
+    /*margin-left: 240px; !* Same as the width of the sidebar *!*/
+    /*margin-right: 240px;*/
     padding: 0 10px;
+    padding-top: 15%;
 }
 .main table, th, td{
     border: 1px solid #111111;
@@ -71,84 +92,12 @@ table{
 th, td {
     padding: 15px;
 }
-.HomeButton {
-    background-color: #26A514;
-    font-family: Uni Sans WFx,sans-serif;
-    font-weight: 400;
-    color: white;
-    padding: 0.5% 1%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    position: fixed;
-    font-size: 30px;
-    border: 5px solid #000;
-}
-.HomeButton:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
-}
-.cor-home-side-ad {
-    -ms-flex-align: start;
-    align-items: flex-start;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    height: auto;
-    -ms-flex-pack: center;
-    justify-content: center;
-    min-width: 140px;
-    min-height: 1200px;
-    max-height: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    text-align: center;
-    width: 100%;
-}
-.cor-home-side-ad .cor-home-side-ad__image {
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-}
-.cor-home-side-ad .cor-home-side-ad__html {
-    position: relative;
-    z-index: 1;
-}
-img, svg {
-    vertical-align: middle;
-}
-img {
-    border-style: none;
-}
-.custom-campaign-left{
-    margin-top: 50px;
-    text-align: center;
-    width: 160px;
-}
-.custom-campaign-left .cor-button{
-    display: inline-block;
-}
-.custom-campaign-right {
-    margin-top: 50px;
-    text-align: center;
-    width: 160px;
-}
-.custom-campaign-right .cor-button {
-    display: inline-block;
-}
-.container {
+.middleBox .container {
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*padding-left: 10px;*/
+    padding-right: 5%;
 }
 small {
     font-size: 0.5em;
@@ -180,7 +129,10 @@ small {
 .col-4 {
     flex-basis: 20%;
 }
-
+.col-1 a{
+    text-decoration:none;
+    color: white;
+}
 @media all and (max-width: 767px) {
     .table-header {
         display: none;
@@ -200,13 +152,13 @@ small {
         display: flex;
         padding: 10px 0;
     }
-:before {
-     color: #6C7A89;
-     padding-right: 10px;
-     content: attr(data-label);
-     flex-basis: 50%;
-     text-align: right;
- }
+    :before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
 }
 h2 {
     font-size: 26px;
@@ -218,8 +170,8 @@ small {
 }
 
 .container .responsive-table .table-row button {
-    background-color: #26A514; /* Green background */
-    border: 1px solid #666666; /* Green border */
+    background-color: #D81E05; /* Green background */
+    border: 1px solid #000000; /* Green border */
     color: #ffffff; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
@@ -241,16 +193,4 @@ small {
 }
 #request2{
     cursor: default;
-}
-/* Add a background color on hover */
-/*.container .responsive-table .table-row button:hover {*/
-/*    background-color: #3e8e41;*/
-/*    font-family: monospace;*/
-/*}*/
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenavlinks {padding-top: 15px;}
-    .sidenavlinks a {font-size: 18px;}
-    .sidenavrechts {padding-top: 15px;}
-    .sidenavrechts a {font-size: 18px;}
 }
