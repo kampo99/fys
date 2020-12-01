@@ -9,14 +9,21 @@
     border-width: 2px;
     color: white;
     border-color: black;
-    margin: 20px;
+    margin: 2%;
 }
 
 .foto {
+    background-image: url("https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
+    width: 30%;
+    height: 25%;
     top: 25%;
     left: 0%;
-    margin: 20px;
+    right: 20%;
+    margin: 2%;
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -24,10 +31,10 @@
 }
 
 .biohoofd {
+    height: 10%;
     position: absolute;
     bottom: 30%;
     left: 0%;
-    right: 70%;
     float: left;
     background-color: #D81E05;
     text-align: center;
@@ -35,12 +42,12 @@
     border-width: 2px;
     color: white;
     border-color: black;
-    margin: 20px;
+    margin: 2%;
 }
 
 .biosub {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 0%;
     right: 35%;
     float: left;
@@ -49,7 +56,7 @@
     border-color: #D81E05;
     border-width: 2px;
     text-align: justify;
-    margin: 20px;
+    margin: 2%;
 }
 
 .info {
@@ -57,13 +64,13 @@
     width: 20%;
     background-color: #D81E05;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     left: 0%;
     text-align: center;
     border-style: solid;
     border-color: black;
     border-width: 2px;
-    margin: 20px;
+    margin: 2%;
     color: white;
     visibility: hidden;
 }
@@ -83,12 +90,12 @@
     width: 20%;
     background-color: #D81E05;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     left: 0%;
     text-align: center;
     border-style: solid;
     border-color: black;
     border-width: 2px;
-    margin: 20px;
+    margin: 2%;
     color: white;
 }
