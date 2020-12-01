@@ -1,0 +1,122 @@
+#ClearBio {
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 63%;
+  left: 15%;
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  height: 5%;
+}
+#SaveBio {
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 63%;
+  left: 0;
+  right: 15%;
+  bottom: 0;
+  width: 15%;
+  height: 5%;
+}
+div.PendingMatches {
+  background-color: white;
+  border: 5px solid black;
+  width: 50%;
+  height: 25%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+div.Matches {
+  background-color: white;
+  border: 5px solid black;
+  width: 50%;
+  height: 25%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#ProfielFoto {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 25%;
+    border: 2px solid black;
+}
+#NaamText {
+  font-size: 40px;
+  border: 2px solid black;
+  background-color: #D81E05;
+  color: white;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 42%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 8%;
+}
+#BioInput {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 53%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 8%;
+}
+#Activiteit {
+  font-size: 30px;
+  border: 1px solid black;
+  background-color: #D81E05;
+  color: white;
+  display: block;
+  text-align: center;
+}
+#Matches {
+  font-size: 30px;
+  border: 1px solid black;
+  background-color: #D81E05;
+  color: white;
+  display: block;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #d81e05;
+  color: white;
+}
