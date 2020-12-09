@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <head>
-	<script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
-	<script src="assets/js/config.js"></script>
 	<link rel="stylesheet" href="assets/css/pages/template.css">
 	<link rel="stylesheet" href="assets/css/pages/reiskeuze.css">
+
+	<script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
+	<script src="assets/js/config.js"></script>
+	<script src="assets/js/reiskeuze.js"></script>
 </head>
 <body>
 <div class="middleBox">
 	<div class="headerBox">
 		<div id="headerText">Kies uw reis</div>
-		<form action="EditableProfile.html">
-			<button class="HomeButton">Profiel</button>
-		</form>
-
-		<form action="matching.html">
-			<button class="Rome">Rome</button>
-		</form>
+		<button class="HomeButton" onclick="myFunction()">Profiel</button>
+		<button class="Rome" onclick="testDatabase()">Rome</button>
 	</div>
 </div>
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
