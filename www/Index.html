@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <meta charset="UTF-8">
     <title>Profiel</title>
+
     <link rel="stylesheet" href="assets/css/pages/Index.css">
     <link rel="stylesheet" href="assets/css/pages/template.css">
-
-    <!--    <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>-->
-    <!--    <script src="assets/js/config.js"></script>-->
-    <!--    <link rel="Config" href="assets/js/config.js">-->
-    <!--    <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>-->
-    <!--    <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>-->
+    <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/Index.js"></script>
 
 
 </head>
@@ -19,29 +20,36 @@
 <div class="middleBox">
     <div class="headerBox">
         <div  id="headerText">Corri&Donni</div>
-        <form action="reiskeuze.html" >
 
             <div class="container">
                 <h1>Log in</h1>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
+                <p>Vul de onderstaande gegevens in om in te loggen.</p>
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" id ="email" required>
-
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
                 <div class="clearfix">
-                    <button class="signupbtn" > Sign Up</button>
+
+                    <button class="signupbtn" id="signupbutton"> Sign Up</button>
+
+                    <p id="debugmessage"> </p>
+
+                 </div>
+
+                <div class="container-signin">
+                    <p>
+                        Nog geen corendon account klik hier <a href="RegistratiePagina.html">Registreer</a>.
+                    </p>
                 </div>
+
             </div>
 
-
-        </form>
     </div>
 </div>
+
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerRight" class="right-banner" onclick="window.open('https://www.corendon.nl')">
+
 </body>
 </html>
 
