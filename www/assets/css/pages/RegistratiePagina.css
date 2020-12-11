@@ -1,0 +1,30 @@
+registratieContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+container{
+    margin-top: 0%;
+}
+
+.containerRegistratie {
+    width: 50%;
+    right: 25%;
+    position: fixed;
+    margin-top: 5%;
+
+}
+
+b{
+    font-size: 16px;
+
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 14px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}

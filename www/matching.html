@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <head>
-	<script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
-	<script src="assets/js/config.js"></script>
 	<link rel="stylesheet" href="assets/css/pages/template.css">
 	<link rel="stylesheet" href="assets/css/pages/matching.css">
+
+	<script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
+	<script src="assets/js/config.js"></script>
+	<script src="assets/js/matching.js"></script>
 </head>
+
+<script type="text/html" id="vragenLijstVraagTemplate">
+	<div>
+		<input type="checkbox" id="vraagCheckbox">
+		<label id="vraagTekst" class="label"></label>
+	</div>
+</script>
+
 <body>
 <div class="middleBox">
 	<div class="headerBox">
 		<div id="headerText">Matching</div>
-		<form action="reiskeuze.html">
-			<button class="HomeButton">Home</button>
-		</form>
-		<form action="/test.html" class="vragenlijst">
-			<input type="checkbox" id="vraag1" name="vraag1" value="Ja">
-			<label for="vraag1" class="label"> Ik wil naar het colloseum</label><br>
-			<input type="checkbox" id="vraag2" name="vraag2" value="Ja">
-			<label for="vraag2" class="label"> Ik wil naar vaticaanstad</label><br>
-			<input type="checkbox" id="vraag3" name="vraag3" value="Ja">
-			<label for="vraag3" class="label"> Ik wil de trevi fontein bezoeken</label><br><br>
-		</form>
+		<button class="HomeButton" id="HomeButton">Home</button>
 
-		<form action="Profiel.html" class="vragenlijst">
-			<button class="PerfecteMatch">Perfecte Match</button>
-		</form>
+		<div id="VragenlijstTitel"></div>
+		<div id="VragenLijstDebug"></div>
+		<div class="vragenlijstBox">
 
-		<form action="matchesresultaten.html" class="vragenlijst">
-			<button class="MeerdereMatches">Meerdere Matches</button>
-		</form>
+		</div>
+
+
+		<button class="PerfecteMatch" id="perfecteMatch">Perfecte Match</button>
+		<button class="MeerdereMatches" id="meerdereMatches">Meerdere Matches</button>
 	</div>
 </div>
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">

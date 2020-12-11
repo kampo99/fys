@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Profiel</title>
+    <link rel="stylesheet" href="assets/css/pages/Index.css">
+    <link rel="stylesheet" href="assets/css/pages/template.css">
+    <link rel="stylesheet" href="assets/css/pages/RegistratiePagina.css">
+    <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/Index.js"></script>
+    <script src="assets/js/Registratie.js"></script>
+
+</head>
+
+<body>
+<div class="middleBox">
+    <div class="headerBox">
+        <div  id="headerText">Corri&Donni</div>
+        <div class = "containerRegistratie">
+            <div class="registratieContainer">
+
+                <h1>Registratie</h1>
+
+
+                <label id="geslachtbtn" for="geslacht">Aanhef</label>
+                <select name="geslacht" id="geslacht">
+                    <option value="select">Select</option>
+                    <option value="man">Dhr.</option>
+                    <option value="vrouw">Mevr.</option>
+                </select>
+
+                <h1> </h1>
+
+                <label for="voornaam"><b>Voornaam</b></label>
+                <input type="text" placeholder="Enter Voornaam" name="voornaam" id ="voornaam" required>
+
+                <label for="achternaam"><b>Achternaam</b></label>
+                <input type="text" placeholder="Enter achternaam" name="achternaam" id ="achternaam" required>
+
+                <label for="emailbtn"><b>E-mail</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id ="emailbtn" required>
+
+                <label for="wachtwoordbtn"><b>Wachtwoord</b></label>
+                <input type="password" placeholder="Enter wachtwoord" value="" id="wachtwoordbtn">
+                <input type="checkbox" id="checkbox"> Show Password
+
+                <h1> </h1>
+
+                <label for="herhaalWachtwoord"><b>Herhaal uw wachtwoord</b></label>
+                <input type="password" placeholder="Enter uw wachtwoord opnieuw" name="email" id ="herhaalWachtwoord" required>
+
+                   <p>Already have an account? <a href="Index.html">Sign in</a>.</p>
+
+                <div class="clearfix" >
+
+                    <button class="registerbtn" id="registerbtn"> Registreer</button>
+
+                    <p id="debugmessage"> </p>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
+<img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerRight" class="right-banner" onclick="window.open('https://www.corendon.nl')">
+
+</body>
+</html>
+
+
