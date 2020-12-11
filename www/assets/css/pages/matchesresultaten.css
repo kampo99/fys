@@ -41,12 +41,14 @@ button:hover {
     float: left;
     margin-left: 5%;
     margin-top: 12.5%;
+    cursor: pointer;
 }
 .right-banner {
     width: 7.5%;
     margin-top: 12.5%;
     float: right;
     margin-right: 5%;
+    cursor: pointer;
 }
 div.middleBox {
     background-color: white;
@@ -93,10 +95,8 @@ th, td {
 }
 .middleBox .container {
     max-width: 1000px;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*padding-left: 10px;*/
     padding-right: 5%;
+    margin-top: -5%;
 }
 small {
     font-size: 0.5em;
@@ -175,8 +175,16 @@ small {
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
 }
-
+.container .responsive-table .table-row button:hover{
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
 .container .responsive-table .table-row button:not(:last-child) {
     border-right: none; /* Prevent double borders */
 }
@@ -190,6 +198,134 @@ small {
 .table-row i{
     padding-right: 5px;
 }
-#request2{
-    cursor: default;
+.container{
+    overflow-y: scroll;
+    height: 475px;
+}
+.matchbar {
+     margin-top:-1%;
+ }
+.matchbar a{
+    font-size: 12px;
+}
+.progress1 {
+    background: rgba(0 ,0 ,0 ,0.4);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 16px;
+    width: 130px;
+    margin-top: 2%;
+}
+.progress2 {
+    background: rgba(0 ,0 ,0 ,0.4);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 16px;
+    width: 130px;
+    margin-top: 2%;
+}
+.progress3 {
+    background: rgba(0 ,0 ,0 ,0.4);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 16px;
+    width: 130px;
+    margin-top: 2%;
+}
+.progress4 {
+    background: rgba(0 ,0 ,0 ,0.4);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 16px;
+    width: 130px;
+    margin-top: 2%;
+}
+.progress5 {
+    background: rgba(0 ,0 ,0 ,0.4);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 16px;
+    width: 130px;
+    margin-top: 2%;
+}
+.progress-value1 {
+    animation: load1 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+}
+.progress-value2 {
+    animation: load2 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+}
+.progress-value3 {
+    animation: load3 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+}
+.progress-value4 {
+    animation: load4 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+}
+.progress-value5 {
+    animation: load5 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+}
+
+@keyframes load1 {
+     0% { width: 0; }
+     100% { width: 90%; }
+}
+@keyframes load2 {
+    0% { width: 0; }
+    100% { width: 69%; }
+}
+@keyframes load3 {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+@keyframes load4 {
+    0% { width: 0; }
+    100% { width: 30%; }
+}
+@keyframes load5 {
+    0% { width: 0; }
+    100% { width: 21%; }
 }
