@@ -8,12 +8,19 @@
 	<script src="assets/js/config.js"></script>
 	<script src="assets/js/reiskeuze.js"></script>
 </head>
+
+<script type="text/html" id="reisButtonTemplate">
+	<button class="reisButton" id="reisButton"></button>
+</script>
+
 <body>
 <div class="middleBox">
 	<div class="headerBox">
 		<div id="headerText">Kies uw reis</div>
-		<button class="HomeButton" id="HomeButton" onclick="myFunction()">Profiel</button>
-		<button class="Rome" id="reisButton">Rome</button>
+		<button class="HomeButton" id="HomeButton">Profiel</button>
+		<div class="reisButtonContainer">
+
+		</div>
 	</div>
 </div>
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
