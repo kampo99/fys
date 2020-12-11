@@ -1,11 +1,12 @@
 window.onload = function () {
-    var gebruikersid_ander = 55;
-    var gebruikersid_zelf = 54;
+    var session = FYSCloud.Session.get();
+    var gebruikersid_ander = FYSCloud.URL.queryString("id");
+    var gebruikersid_zelf = session.gebruikersId;
 
 
     FYSCloud.API.queryDatabase(
-        "SELECT * FROM `match` WHERE sender_Profiel_gebruikersid = ? AND reciever_id = ?",
-        [gebruikersid_zelf, gebruikersid_ander]
+        "SELECT * FROM `match` WHERE sender_Profiel_gebruikersid = ? AND reciever_id = ? AND sender_Bestemming_plaats = ?",
+        [gebruikersid_zelf, gebruikersid_ander,session.bestemming]
     ).done(function (data) {
         console.log(data)
 
@@ -73,8 +74,8 @@ window.onload = function () {
 
             //aanvraag doen
             FYSCloud.API.queryDatabase(
-                "INSERT INTO `match` (sender_Profiel_gebruikersid, reciever_id, sender_vervaldatum, sender_Bestemming_plaats, reciever_vervaldatum, status) SELECT Profiel_gebruikersid, Profiel_gebruikersid, vervaldatum, Bestemming_plaats, vervaldatum, standaardstatus FROM `reis` WHERE Profiel_gebruikersid = ? or Profiel_gebruikersid = ?",
-                [gebruikersid_zelf, gebruikersid_ander]
+                "INSERT INTO `match` (sender_Profiel_gebruikersid, reciever_id, sender_vervaldatum, sender_Bestemming_plaats, reciever_vervaldatum, status) SELECT Profiel_gebruikersid, Profiel_gebruikersid, vervaldatum, Bestemming_plaats, vervaldatum, standaardstatus FROM `reis` WHERE Profiel_gebruikersid = ? and Bestemming_plaats = ?",
+                [gebruikersid_zelf, session.bestemming]
             ).done(function (data) {
                 console.log(data)
 

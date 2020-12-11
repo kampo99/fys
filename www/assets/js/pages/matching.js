@@ -61,11 +61,6 @@ window.onload = function(){
         console.log(reason);
     });
 
-    //De onclick functie van de home knop
-    document.getElementById("HomeButton").onclick = function(){
-        FYSCloud.URL.redirect("reiskeuze.html");
-    }
-
     //De onclick functie van de perfecteMatch knop
     document.getElementById("perfecteMatch").onclick = function(){
         //De array die later de ingevuldeantwoorden opslaat
