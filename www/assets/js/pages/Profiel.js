@@ -3,7 +3,7 @@ window.onload = function () {
     var gebruikersid_ander = FYSCloud.URL.queryString("id");
     var gebruikersid_zelf = session.gebruikersId;
 
-
+// kijkt als er al een match is
     FYSCloud.API.queryDatabase(
         "SELECT * FROM `match` WHERE sender_Profiel_gebruikersid = ? AND reciever_id = ? AND sender_Bestemming_plaats = ?",
         [gebruikersid_zelf, gebruikersid_ander,session.bestemming]
@@ -29,7 +29,7 @@ window.onload = function () {
     })
 
 
-
+// vraagt de data aan van de profiel die je bezoekt
     FYSCloud.API.queryDatabase(
         "SELECT * FROM profiel WHERE gebruikersid = ?",
         [gebruikersid_ander]
@@ -91,6 +91,7 @@ window.onload = function () {
                         "DELETE FROM `match` WHERE sender_Profiel_gebruikersid = reciever_id"
                     ).done(function (data) {
                         console.log(data)
+
                     }).fail(function (reason) {
                         console.log(reason)
                     })

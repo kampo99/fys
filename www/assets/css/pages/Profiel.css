@@ -3,38 +3,36 @@
     src: url('../../../assets/fonts/Cantarell-Regular.ttf') format("opentype");
 }
 
-
-.naam {
-    background-color: #D81E05;
-    position: absolute;
-    left: 0;
-    right: 70%;
-    height: 10%;
-    top: 12%;
-    border-style: solid;
-    border-width: 2px;
-    color: white;
-    border-color: black;
-    margin: 2%;
-}
-
-
 #naam {
+    font-size: 40px;
+    border: 2px solid black;
+    background-color: #D81E05;
+    color: white;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 200%;
+    top: 42%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 8%;
 }
 
 .profielfotobox {
+    display: block;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 30%;
     height: 25%;
-    top: 25%;
-    left: 0;
-    right: 20%;
-    margin: 2%;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
+    border: 2px solid black;
 }
 
 #profielfoto {
@@ -48,33 +46,38 @@
 }
 
 .biohoofd {
-    height: 10%;
     position: absolute;
-    bottom: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 51%;
     left: 0;
-    float: left;
-    background-color: #D81E05;
-    text-align: center;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 4%;
     border-style: solid;
-    border-width: 2px;
-    color: white;
     border-color: black;
-    margin: 2%;
+    border-width: 2px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: #D81E05;
 }
 
 .biosub {
     position: absolute;
-    bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 56%;
     left: 0;
-    right: 35%;
-    float: left;
-    background-color: white;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 12%;
     border-style: solid;
-    border-color: #D81E05;
+    border-color: black;
     border-width: 2px;
-    text-align: justify;
-    margin: 2%;
-    height: 10%;
+    font-size: 12px;
 }
 
 .info {
