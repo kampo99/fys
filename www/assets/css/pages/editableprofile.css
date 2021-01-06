@@ -83,6 +83,13 @@ div.Matches {
   width: 30%;
   height: 8%;
 }
+#feedback {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 68%;
+  font-weight: bold;
+}
 #Activiteit {
   font-size: 30px;
   border: 1px solid black;

@@ -2,8 +2,12 @@
 <head>
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/pages/editableprofile.css">
+
   <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
   <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages/EditableProfile.js"></script>
 </head>
 <body>
 <div class="middleBox">
@@ -16,13 +20,12 @@
 
 
   <img id="ProfielFoto" src="https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd" alt="Profielfoto">
-  <div id="NaamText">Jonathan</div>
-  <form>
-    <input type="text" id="BioInput" name="BioInput">
-  </form>
+  <div id="NaamText">Naam</div>
+  <textarea id="BioInput">Enter text here...</textarea>
 
-  <button id="SaveBio">Save</button>
-  <button id="ClearBio">Clear</button>
+  <button id="SaveBio">Opslaan</button>
+  <button id="ClearBio">Legen</button>
+  <div id="feedback"></div>
 
   <div class="PendingMatches">
     <div id="Activiteit">Activiteit</div>
