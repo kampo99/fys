@@ -1,58 +1,48 @@
 window.onload = function(){
-        var gebruikersId1 = 1;
-        var gebruikersId2 = 2;
-        var gebruikersId3 = 3;
-        var gebruikersId4 = 44;
-        var gebruikersId5 = 45;
+    var session = FYSCloud.Session.get();
+    var accounts = session.matchaccounts;
 
-        var session = FYSCloud.Session.get();
-        var profielen = session.matchaccounts;
+    //Haal alle duplicate mensen uit de lijst
+    $.unique(accounts);
+
+    var queryTemplate = "SELECT * FROM profiel WHERE";
+    accounts.forEach((id, i) =>{
+        if(i === (accounts.length - 1)){
+            //Voeg een reeks aan vraagtekens toe aan de query, zodat er variabelen inkunnen
+            queryTemplate += (" gebruikersid = " + id);
+        }else{
+            //Voeg een reeks aan vraagtekens toe aan de query, zodat er variabelen inkunnen
+            queryTemplate += (" gebruikersid = " + id + " OR");
+        }
+    });
 
     FYSCloud.API.queryDatabase(
-            "SELECT * FROM profiel WHERE gebruikersid = 1 or gebruikersid = 2 or gebruikersid = 3 or gebruikersid = 44 or gebruikersid = 45",
-            [gebruikersId1, gebruikersId2, gebruikersId3, gebruikersId4, gebruikersId5]
+            queryTemplate
         ).done(function(data) {
-            console.log(data);
+            var template = $("#profielMatchTemplate").html();
+            data.forEach(gebruiker =>{
+                var helenaam = gebruiker.voornaam + " " + gebruiker.achternaam;
+                var profielTemplate = $(template);
+                var profielTemplate = profielTemplate[0];
 
-        console.log(data[0].voornaam + " " + data[0].achternaam);
 
-        var helenaam1 = data[0].voornaam + " " + data[0].achternaam;
-        var helenaam2 = data[1].voornaam + " " + data[1].achternaam;
-        var helenaam3 = data[2].voornaam + " " + data[2].achternaam;
-        var helenaam4 = data[3].voornaam + " " + data[3].achternaam;
-        var helenaam5 = data[4].voornaam + " " + data[4].achternaam;
+                //Pak de eerste de beste element met de classname profielnaam, vandaar de [0] ik wil alleen het eerste element
+                var profielNaamElement = profielTemplate.getElementsByClassName("ProfielNaam")[0];
 
-        document.getElementById('profielnaam1').textContent = helenaam1;
-        document.getElementById('profielnaam2').textContent = helenaam2;
-        document.getElementById('profielnaam3').textContent = helenaam3;
-        document.getElementById('profielnaam4').textContent = helenaam4;
-        document.getElementById('profielnaam5').textContent = helenaam5;
+                //Zet de innerhtml van de profielnaam gelijk aan de helenaam van de gebruiker
+                profielNaamElement.innerHTML = helenaam;;
 
-            document.getElementById('request1').onclick = function() {
-                FYSCloud.URL.redirect("Profiel.html", {
-                    id: gebruikersId1
-                });
-                 }
-            document.getElementById('request2').onclick = function() {
-                FYSCloud.URL.redirect("Profiel.html", {
-                    id: gebruikersId2
-                });
-            }
-            document.getElementById('request3').onclick = function() {
-                FYSCloud.URL.redirect("Profiel.html", {
-                    id: gebruikersId3
-                });
-            }
-            document.getElementById('request4').onclick = function() {
-                FYSCloud.URL.redirect("Profiel.html", {
-                    id: gebruikersId4
-                });
-            }
-            document.getElementById('request5').onclick = function() {
-                FYSCloud.URL.redirect("Profiel.html", {
-                    id: gebruikersId5
-                });
-            }
+                console.log(profielTemplate);
+                // elke onclick function wordt geredirect naar de aangewezen url pagina.
+                profielTemplate.getElementsByClassName("BekijkProfiel")[0].onclick = function() {
+                    FYSCloud.URL.redirect("Profiel.html", {
+                        id: gebruiker.gebruikersid
+                    });
+                }
+
+                //Creeer de template in de HTML
+                $(".resultatenBox").append(profielTemplate);
+            })
 
         }).fail(function(reason) {
             console.log(reason);
