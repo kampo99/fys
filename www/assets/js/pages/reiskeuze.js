@@ -11,11 +11,10 @@ window.onload = function(){
             var reis = data[i];
             reisButtonTemplate.attr("bestemming", reis.Bestemming_plaats);
             for(var j = 0; j < reisButtonTemplate.length; j++){
-                if (reisButtonTemplate[j].id == "reisButton"){
+                if (reisButtonTemplate[j].className == "reisButton"){
                     reisButtonTemplate[j].innerHTML = reis.Bestemming_plaats;
                     reisButtonTemplate[j].onclick = function(){
                         var reisBestemming = $(this).attr("bestemming");
-                        FYSCloud.Session.set("gebruikersId", gebruikersId);
                         FYSCloud.Session.set("bestemming", reisBestemming);
                         FYSCloud.URL.redirect("matching.html");
                     }
