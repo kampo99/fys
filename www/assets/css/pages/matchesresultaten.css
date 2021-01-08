@@ -8,6 +8,16 @@
     height: 100%;
     font-size: 30px;
 }
+.VragenlijstButton{
+    width: 20%;
+    padding: 0.5% 1%;
+    display: inline-block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    height: 100%;
+    font-size: 30px;
+}
 
 div.headerBox {
     background-color: #d81e05;

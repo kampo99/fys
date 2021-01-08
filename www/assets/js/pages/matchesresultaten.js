@@ -39,9 +39,13 @@ window.onload = function(){
                         id: gebruiker.gebruikersid
                     });
                 }
-
                 //Creeer de template in de HTML
                 $(".resultatenBox").append(profielTemplate);
+
+                //Button verwijst naar de pagina vragenlijst
+                $("#VragenlijstButton").click(function() {
+                    FYSCloud.URL.redirect("matching.html");
+                });
             })
 
         }).fail(function(reason) {
