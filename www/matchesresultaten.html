@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="assets/css/pages/matchesresultaten.css">
+    <link rel="stylesheet" href="assets/css/pages/template.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
@@ -10,88 +12,28 @@
     <script src="assets/js/app.js"></script>
 </head>
 
+<script type="text/html" id="profielMatchTemplate">
+    <div class="ProfielTabblad">
+        <div class="ProfielNaam">naam</div>
+        <div class="matchbar">
+            <a>Match 90%</a>
+            <div class="matchbarBalk">
+                <div class="matchbarVulling"></div>
+            </div>
+        </div>
+        <button class="BekijkProfiel">Profiel bekijken</button>
+    </div>
+</script>
+
 <body>
 <div class="middleBox">
     <div class="headerBox">
         <div id="headerText">Matches</div>
         <button class="HomeButton" id="HomeButton">Home</button>
-            <div class="main">
-                <div class="container">
-                    <ul class="responsive-table">
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Name" id="profielnaam1"><i class="fa fa-star" style="font-size:20px"></i><a>undefined</a></div>
-                            <div class="matchbar">
-                                <a>Match 90%</a>
-                                <div class="progress1">
-                                    <div class="progress-value1"></div>
-                                </div>
-                            </div>
-                            <div class="col col-2" data-label="button1">
-                                <button id="request1" type="button" onclick="myFunction()">
-                                    Profiel bekijken
-                                </button>
-                            </div>
-                        </li>
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Name" id="profielnaam2"><a></a></div>
-                            <div class="matchbar">
-                                <a>Match 69%</a>
-                                <div class="progress2">
-                                    <div class="progress-value2"></div>
-                                </div>
-                            </div>
-                            <div class="col col-2" data-label="button1">
-                                <button id="request2" type="button" onclick="myFunction()">
-                                    Profiel bekijken
-                                </button>
-                            </div>
-                        </li>
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Name" id="profielnaam3"><a></a></div>
-                            <div class="matchbar">
-                                <a>Match 50%</a>
-                                <div class="progress3">
-                                    <div class="progress-value3"></div>
-                                </div>
-                            </div>
-                            <div class="col col-2" data-label="button1">
-                                <button id="request3" type="button" onclick="myFunction()">
-                                    Profiel bekijken
-                                </button>
-                            </div>
-                        </li>
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Name" id="profielnaam4"><a></a></div>
-                            <div class="matchbar">
-                                <a>Match 30%</a>
-                                <div class="progress4">
-                                    <div class="progress-value4"></div>
-                                </div>
-                            </div>
-                            <div class="col col-2" data-label="button1">
-                                <button id="request4" type="button" onclick="myFunction()">
-                                    Profiel bekijken
-                                </button>
-                            </div>
-                        </li>
-                        <li class="table-row">
-                            <div class="col col-1" data-label="Name" id="profielnaam5"><a>onbekend</a></div>
-                            <div class="matchbar">
-                                <a>Match 21%</a>
-                                <div class="progress5">
-                                    <div class="progress-value5"></div>
-                                </div>
-                            </div>
-                            <div class="col col-2" data-label="button1">
-                                <button id="request5" type="button" onclick="myFunction()">
-                                    Profiel bekijken
-                                </button>
-                            </div>
-                        </li>
+        <button class="VragenlijstButton" id="VragenlijstButton">Vragenlijst</button>
+        <div class="resultatenBox">
 
-                    </ul>
-                </div>
-            </div>
+        </div>
     </div>
 </div>
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner" onclick="window.open('https://www.corendon.nl')">
