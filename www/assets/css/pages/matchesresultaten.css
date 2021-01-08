@@ -51,37 +51,6 @@ h2 {
     margin: 20px 0;
     text-align: center;
 }
-.matchbar {
-    display: inline-block;
-    left: 5%;
- }
-.matchbar a{
-    font-size: 12px;
-    color: white;
-    margin-left: 2%;
-}
-.matchbarBalk {
-    background: rgba(0 ,0 ,0 ,0.4);
-    justify-content: flex-start;
-    border-radius: 100px;
-    align-items: center;
-    position: relative;
-    padding: 0 5px;
-    display: flex;
-    height: 16px;
-    width: 130px;
-    margin-top: 2%;
-}
-
-.matchbarVulling {
-    animation: load1 2s normal forwards;
-    box-shadow: 0 10px 40px -10px #fff;
-    border-radius: 100px;
-    background: #fff;
-    height: 10px;
-    width: 0;
-}
-
 .resultatenBox {
     display: flex;
     flex-direction: column;
