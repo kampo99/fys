@@ -121,3 +121,30 @@
     color: white;
 }
 
+.containerVragen {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-content: flex-start;
+    right: 5%;
+    left: 25%;
+    margin-top: 10%;
+    bottom: 10%;
+    top: 65%;
+    overflow-y: scroll;
+    height: 150px;
+    border-style: solid;
+
+
+}
+
+.vraagtekst {
+    margin-left: 2%;
+    text-align: left;
+    text-decoration: none;
+    font-size: 25px;
+    margin-bottom: 2%;
+
+
+
+}
