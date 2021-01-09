@@ -85,7 +85,7 @@
     width: 20%;
     background-color: #D81E05;
     position: absolute;
-    bottom: 2%;
+    bottom: 72%;
     left: 0;
     text-align: center;
     border-style: solid;
@@ -111,7 +111,7 @@
     width: 20%;
     background-color: #D81E05;
     position: absolute;
-    bottom: 2%;
+    bottom: 72%;
     left: 0;
     text-align: center;
     border-style: solid;
@@ -121,11 +121,60 @@
     color: white;
 }
 
+.accepteer{
+    height: 10%;
+    width: 10%;
+    background-color: green;
+    position: absolute;
+    bottom: 72%;
+    left: 0;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 2%;
+    color: white;
+    visibility: hidden;
+}
+
+.wijsaf{
+    height: 10%;
+    width: 10%;
+    background-color: #D81E05;
+    position: absolute;
+    bottom: 72%;
+    left: 10%;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 2%;
+    color: white;
+    visibility: hidden;
+}
+
+#email{
+    height: 10%;
+    width: auto;
+    background-color: #D81E05;
+    position: absolute;
+    bottom: 72%;
+    left: 0;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 2%;
+    color: white;
+    visibility: hidden;
+
+}
+
 .intressen{
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 72%;
+    top: 70%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -142,20 +191,15 @@
 
 
 .containerVragen {
-    display: flex;
-    flex-direction: column;
     position: fixed;
-    align-content: flex-start;
     right: 5%;
-    left: 25%;
+    left: 5%;
     margin-top: 10%;
     bottom: 10%;
     top: 65%;
     overflow-y: scroll;
     height: 150px;
     border-style: solid;
-
-
 }
 
 .vraagtekst {
@@ -164,7 +208,4 @@
     text-decoration: none;
     font-size: 25px;
     margin-bottom: 2%;
-
-
-
 }
