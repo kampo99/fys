@@ -4,7 +4,7 @@ window.onload = function(){
         "SELECT DISTINCT * FROM profiel INNER JOIN `match` ON profiel.gebruikersid = match.sender_Profiel_gebruikersid OR profiel.gebruikersid = match.reciever_id WHERE profiel.gebruikersid = ?;",
         [session.gebruikersId]
     ).done(function(data) {
-        console.log(data);
+        //maak een handige variabele van de gebruikersdata
         var gebruikersInfo = data[0];
 
         //Verander de naam, naar de juiste gebruikersnaam
@@ -12,6 +12,11 @@ window.onload = function(){
 
         //vul de bio textarea in met de al ingevulde bio
         document.getElementById('BioInput').value = gebruikersInfo.bio;
+
+        //als er een profielfoto gevonden is word deze ingeladen
+        if(gebruikersInfo.foto != null){
+            document.getElementById(`ProfielFoto`).setAttribute(`src`, gebruikersInfo.foto);
+        }
 
         //Savebioknop onclick
         document.getElementById("SaveBio").onclick = function(){
@@ -64,6 +69,7 @@ window.onload = function(){
         });
     }
 
+    //De functie om een matchtemplate in te vullen en te appenden
     function appendMatchTemplate(matchdata,matchPersonData){
         var template = $("#MatchTabbladTemplate").html();
         var matchTemplate = $(template);
