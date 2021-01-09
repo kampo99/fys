@@ -82,6 +82,7 @@ div.Matches {
   bottom: 0;
   width: 30%;
   height: 8%;
+  resize: none;
 }
 #feedback {
   text-align: center;
@@ -106,24 +107,44 @@ div.Matches {
   display: block;
   text-align: center;
 }
-table {
-  border-collapse: collapse;
-  width: 100%;
+#activiteitenBox {
+  width: 48.5%;
+}
+.ScrollBox {
+  position: fixed;
+  width: 50%;
+  overflow-y: scroll;
+  height: 19.5%;
+}
+div.MatchTemplate {
+  background-color: #D81E05;
+  border: 1px solid black;
+  width: 99%;
+  height: 30%;
+  margin-top: 1%;
 }
 
-table td, table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-table tr:nth-child(even){background-color: #f2f2f2;}
-
-table tr:hover {background-color: #ddd;}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #d81e05;
+.MatchText {
+  font-size: 20px;
   color: white;
+  display: inline-block;
+  text-align: center;
+  padding-right: 4%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+.MatchProfielKnop {
+  display: inline-block;
+  width: 15%;
+  height: 50%;
+}
+.UitloggenKnop{
+  width: 20%;
+  padding: 0.5% 1%;
+  display: inline-block;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 100%;
+  font-size: 30px;
 }

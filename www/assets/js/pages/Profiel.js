@@ -12,12 +12,41 @@ window.onload = function () {
             console.log(data)
                 if (gebruikersid_ander == data[0].reciever_id && gebruikersid_zelf == data[0].sender_Profiel_gebruikersid) {
                     console.log("er is match")
-                    document.getElementById("boxtext").style.visibility = "visible";
-                    document.getElementById("aanvraagbutton").style.visibility = "hidden";
-                    var status = data[0].status;
-                    console.log(status)
-                    document.getElementById("boxtext").style.fontSize = "25px"
-                    document.getElementById("boxtext").innerText = status;
+
+                    switch (data[0].status){
+                        case data[0].status = 'in afwachting':
+                            if (gebruikersid_zelf = data[0].sender_Profiel_gebruikersid){
+                                document.getElementById("boxtext").style.visibility = "visible";
+                                document.getElementById("aanvraagbutton").style.visibility = "hidden";
+                                var status = data[0].status;
+                                console.log(status)
+                                document.getElementById("boxtext").style.fontSize = "25px"
+                                document.getElementById("boxtext").innerText = status;
+                                break;
+                            } else {
+                                document.getElementById("accepteer").style.visibility = "visible";
+                                document.getElementById("wijsaf").style.visibility = "visible";
+                                document.getElementById("aanvraagbutton").style.visibility = "hidden";
+                                break;
+                            }
+                        case data[0].status = 'geaccepteerd':
+
+                            break;
+                        case data[0].status = 'geweigerd':
+
+                            break;
+                    }
+
+
+
+
+
+                    // document.getElementById("boxtext").style.visibility = "visible";
+                    // document.getElementById("aanvraagbutton").style.visibility = "hidden";
+                    // var status = data[0].status;
+                    // console.log(status)
+                    // document.getElementById("boxtext").style.fontSize = "25px"
+                    // document.getElementById("boxtext").innerText = status;
 
                 } else {
                     console.log("er is geen match")
@@ -26,7 +55,7 @@ window.onload = function () {
         }).fail(function (reason) {
             console.log(reason)
             console.log("er is geen match")
-        })
+})
 
 
 // vraagt de data aan van de profiel die je bezoekt
@@ -77,27 +106,6 @@ window.onload = function () {
             }).fail(function (reason){
                 console.log(reason);
             })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }).fail(function (reason) {
