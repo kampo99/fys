@@ -18,24 +18,22 @@ window.onload = function(){
 
             //Ik loop door alle vragen heen, om vervolgens per vraag een template van een checkbox en label aan te maken
             for(var i = 0; i < vragen.length; i++) {
-                var vraagInputTemplate = $(template);
+                var vraagInputTemplate = $(template);   //Sla het template op als jquery object
                 var vraagInfo = vragen[i];     //variabele voor simpelere referentie
 
-                //Ik loop door de children van de template heen zodat ik ze apart kan aanspreken.
-                for(var j = 0; j < vraagInputTemplate.children().length; j++){
-                    if (vraagInputTemplate.children().get(j).id == "vraagTekst"){       //Vraagtekst ja of nee
-                        vraagInputTemplate.children().get(j).id = "vraag"+vraagInfo.vraagid;
-                        vraagInputTemplate.children().get(j).innerText = vraagInfo.tekst;
-                        vraagInputTemplate.children().get(j).htmlFor = "checkbox"+vraagInfo.vraagid;
-                    }else if(vraagInputTemplate.children().get(j).id == "vraagCheckbox"){ //Checkbox ja of nee
-                        vraagInputTemplate.children().get(j).id = "checkbox"+vraagInfo.vraagid;
-                        vraagInputTemplate.children().get(j).name = vraagInfo.vraagid;  //checkbox.name word vraagid
-                        antwoorden[i] = vraagInputTemplate.children().get(j);   //Antwoorden krijgt newCheckbox[i]
-                        for(var x = 0; x < voorgaandeAntwoorden.length; x++){
-                            if(voorgaandeAntwoorden[x].vraagid == vraagInfo.vraagid){
-                                vraagInputTemplate.children().get(j).checked = true;    //Checkbox word aangevinkt
-                            }
-                        }
+                //Vraag tekst gerelateerd
+                var vraagTekst = vraagInputTemplate.find(".label"); //vind de label van de checkbox en sla hem op als jquery object
+                vraagTekst.text(vraagInfo.tekst);    //zet de tekst van de vraag
+                vraagTekst.attr(`for`,vraagInfo.vraagid);    //zet de htmlfor van de vraag op de checkbox zodat hij clickable is
+
+                //Checkbox gerelateerd
+                var checkbox = vraagInputTemplate.find("#checkbox")     //vind en maak een jquery object van de checkbox
+                checkbox.attr(`id`,vraagInfo.vraagid);    //Checkbox zijn id word gezet
+                antwoorden[i] = checkbox[0];              //Voeg de checkbox aan de antwoorden array toe, de [0] is zodat ik het DOM element heb
+                //Zet de checkbox aan of uit
+                for(var j = 0; j < voorgaandeAntwoorden.length; j++){
+                    if(voorgaandeAntwoorden[j].vraagid == vraagInfo.vraagid){
+                        checkbox.attr(`checked`,true);    //Checkbox word aangevinkt
                     }
                 }
                 $(".vragenlijstBox").append(vraagInputTemplate);    //Template word toegevoegd aan html
@@ -64,13 +62,11 @@ window.onload = function(){
             }
         }
         if(ingevuldeAntwoorden.length > 0){     //Zijn er 1 of meer antwoorden
-            UpdateAntwoorden(ingevuldeAntwoorden);      //Antwoorden updaten
-
             //If statement om de match manier toe te passen
             if(typeMatch == "meerdere"){
-                VindMeerdereMatches(ingevuldeAntwoorden);   //Meerdere matches zoeken
+                UpdateAntwoorden(ingevuldeAntwoorden,VindMeerdereMatches);      //Antwoorden updaten en matchfunctie meegeven
             }else if(typeMatch == "perfecte"){
-                ZoekPerfecteMatch(ingevuldeAntwoorden);     //Perfecte match zoeken
+                UpdateAntwoorden(ingevuldeAntwoorden,ZoekPerfecteMatch);      //Antwoorden updaten en matchfunctie meegeven
             }
         }else{
             //Geef de gebruiker feedback
@@ -79,15 +75,7 @@ window.onload = function(){
         }
     }
 
-//Antwoorden updaten in de database
-    function UpdateAntwoorden(ingevuldeAntwoorden){
-        //Verwijder alle hiervoor ingevulde antwoorden
-        VerwijderAntwoorden();
-        //Ik vul alle antwoorden in
-        InsertAntwoorden(ingevuldeAntwoorden);
-    }
-
-//Functie om de perfectematch te vinden
+    //Functie om meerdere matches te vinden
     function VindMeerdereMatches(matchAntwoorden) {
         FYSCloud.API.queryDatabase(
             "SELECT * FROM antwoord WHERE bestemming = ? and not gebruikersid = ?",
@@ -99,7 +87,7 @@ window.onload = function(){
                 //For loop door de ingevulde antwoorden van de gebruiker, deze variabele is meegegeven als parameter
                 for(var j = 0; j < matchAntwoorden.length; j++){
                     //Als de vraagid van de current iteratie overeenkomt met die van 1 van de ingevulde vragen van de gebruiker. sla ik hem op
-                    if(data[i].vraagid == matchAntwoorden[j].name){
+                    if(data[i].vraagid == matchAntwoorden[j].id){
                         overeenkomendeAntwoordenGebruikers.push(data[i].gebruikersid);
                     }
                 }
@@ -119,7 +107,7 @@ window.onload = function(){
         });
     }
 
-//Functie om de perfectematch te vinden
+    //Functie om de perfectematch te vinden
     function ZoekPerfecteMatch(matchAntwoorden) {
         FYSCloud.API.queryDatabase(
             "SELECT * FROM antwoord WHERE bestemming = ? and not gebruikersid = ?",
@@ -131,7 +119,7 @@ window.onload = function(){
                 //For loop door de ingevulde antwoorden van de gebruiker, deze variabele is meegegeven als parameter
                 for(var j = 0; j < matchAntwoorden.length; j++){
                     //Als de vraagid van de current iteratie overeenkomt met die van 1 van de ingevulde vragen van de gebruiker. sla ik hem op
-                    if(data[i].vraagid == matchAntwoorden[j].name){
+                    if(data[i].vraagid == matchAntwoorden[j].id){
                         overeenkomendeAntwoordenGebruikers.push(data[i].gebruikersid);
                     }
                 }
@@ -174,7 +162,7 @@ window.onload = function(){
         });
     }
 
-//Functie om de voorgaande vragen array te verversen met net ingevulde vragen, voor als de gebruiker op de pagina is gebleven
+    //Functie om de voorgaande vragen array te verversen met net ingevulde vragen, voor als de gebruiker op de pagina is gebleven
     function VerversVoorgaandeAntwoorden(){
         FYSCloud.API.queryDatabase(
             "SELECT * FROM antwoord WHERE gebruikersid = ? and bestemming = ?",
@@ -185,42 +173,43 @@ window.onload = function(){
             console.log(reason);
         });
     }
-//Query functie om alle voorgaande antwoorden te verwijderen van deze reis
-    function VerwijderAntwoorden() {
+
+    //Query functie om alle voorgaande antwoorden te verwijderen van deze reis
+    function UpdateAntwoorden(ids,callback) {
         FYSCloud.API.queryDatabase(
             "DELETE FROM antwoord WHERE gebruikersid = ? and bestemming = ?",
             [session.gebruikersId,session.bestemming]
         ).done(function(data) {
-            console.log(data);
-        }).fail(function(reason) {
-            console.log(reason);
-        });
-    }
-//Functie om de antwoorden in te voeren
-    function InsertAntwoorden(ids) {
-        var queryTemplate = "INSERT INTO antwoord (gebruikersid, vraagid,bestemming) VALUES ";
-        var queryVariabelenTemplate = "(?,?,?),"
-        var queryVariabelen = [];
+            //Opzet van de insert query
+            var queryTemplate = "INSERT INTO antwoord (gebruikersid, vraagid,bestemming) VALUES ";
+            //String template, van de variabelen
+            var queryVariabelenTemplate = "(?,?,?),"
+            //De query variabelen, deze word gevuld wanneer de query gemaakt word
+            var queryVariabelen = [];
 
-        //Foreach van de ids array, zodat voor elk ID een toevoeging aan de query komt
-        ids.forEach(id =>{
-            //Voeg een reeks aan vraagtekens toe aan de query, zodat er variabelen inkunnen
-            queryTemplate += queryVariabelenTemplate;
+            //Foreach van de ids array, zodat voor elk ID een toevoeging aan de query komt
+            ids.forEach(id =>{
+                //Voeg een reeks aan vraagtekens toe aan de query, zodat er variabelen inkunnen
+                queryTemplate += queryVariabelenTemplate;
 
-            //Voeg een reeks aan variabelen toe aan de queryVariabelen array
-            queryVariabelen.push(session.gebruikersId);
-            queryVariabelen.push(id.name);
-            queryVariabelen.push(session.bestemming);
-        });
+                //Voeg een reeks aan variabelen toe aan de queryVariabelen array
+                queryVariabelen.push(session.gebruikersId);
+                queryVariabelen.push(id.id);
+                queryVariabelen.push(session.bestemming);
+            });
 
-        //Verander de , (laatste leesteken in de query string) in een ; zodat de query klopt
-        queryTemplate = queryTemplate.slice(0, -1);
-        queryTemplate += ";";
+            //Verander de , (laatste leesteken in de query string) in een ; zodat de query klopt
+            queryTemplate = queryTemplate.slice(0, -1);
+            queryTemplate += ";";
 
-        FYSCloud.API.queryDatabase(
-            queryTemplate,queryVariabelen
-        ).done(function(data) {
-            console.log(data);
+            FYSCloud.API.queryDatabase(
+                queryTemplate,queryVariabelen
+            ).done(function(data) {
+                //De matchfunctie die meegegeven is als parameter callback functie
+                callback(ids);
+            }).fail(function(reason) {
+                console.log(reason);
+            });
         }).fail(function(reason) {
             console.log(reason);
         });
