@@ -33,6 +33,8 @@ button:hover {
     height: 100%;
     font-size: 30px;
     display: inline-block;
+    border: 0px;
+    border-right: 2px solid #000;
 }
 .left-banner {
     width: 7.5%;
@@ -60,7 +62,7 @@ div.middleBox {
 }
 div.headerBox {
     background-color: #d81e05;
-    border: 3px solid black;
+    border-bottom: 2px solid black;
     width: auto;
     height: 10%;
     position: relative;
