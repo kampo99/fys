@@ -44,12 +44,9 @@ h2 {
     text-align: center;
 }
 .resultatenBox {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     float: left;
-    margin-top: 15%;
-    flex: 1;
+    margin-top: 10%;
     width: 95%;
     overflow-y: scroll;
     height: 450px;
