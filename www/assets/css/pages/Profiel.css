@@ -121,7 +121,7 @@
     color: white;
 }
 
-.accepteer{
+.accepteer {
     height: 10%;
     width: 10%;
     background-color: green;
@@ -137,7 +137,7 @@
     visibility: hidden;
 }
 
-.wijsaf{
+.wijsaf {
     height: 10%;
     width: 10%;
     background-color: #D81E05;
@@ -153,7 +153,7 @@
     visibility: hidden;
 }
 
-#email{
+#email {
     height: 10%;
     width: auto;
     background-color: #D81E05;
@@ -170,7 +170,7 @@
 
 }
 
-.intressen{
+.intressen {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
