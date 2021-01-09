@@ -7,6 +7,11 @@ $(document).ready(function() {
     $("#ProfielButton").click(function() {
         FYSCloud.URL.redirect("EditableProfile.html");
     });
+    //De onclick functie van de uitlog knop
+    $("#UitloggenKnop").click(function() {
+        //FYSCloud.Session.clear();
+        FYSCloud.URL.redirect("Index.html");
+    });
 });
 //Handige functie om voor een bepaalde tijd feedback te laten zien
 function geefFeedback(feedbackObject,feedbackTekst,overleefTijd) {
