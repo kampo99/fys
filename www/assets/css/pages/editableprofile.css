@@ -137,6 +137,7 @@ div.MatchTemplate {
   display: inline-block;
   width: 15%;
   height: 50%;
+  border: 1px solid #000000;
 }
 .UitloggenKnop{
   width: 20%;
