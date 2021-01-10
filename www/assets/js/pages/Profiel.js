@@ -163,7 +163,7 @@ window.onload = function () {
                     //als je zelf de match hebt verstuurd krijg je de match status te zien
                     document.getElementById("statusTekst").style.visibility = "visible";
                     document.getElementById("aanvraagknop").style.visibility = "hidden";
-                    document.getElementById("statusTekst").style.fontSize = "25px"
+                    document.getElementById("statusTekst").style.fontSize = "100%"
                     document.getElementById("statusTekst").innerText = match.status;
                     break;
                 } else if ("ontvangen") {
@@ -183,7 +183,7 @@ window.onload = function () {
             case match.status = 'geaccepteerd':
                 //als de status geaccepteerd is krijg je elkaars email te zien
                 document.getElementById("email").style.visibility = "visible";
-                document.getElementById("email").style.fontSize = "25px"
+                document.getElementById("email").style.fontSize = "100%"
                 document.getElementById("email").innerText = gebruikersinfo.email;
                 document.getElementById("aanvraagknop").style.visibility = "hidden";
                 break;
@@ -204,7 +204,7 @@ window.onload = function () {
             ["geaccepteerd", gebruikersid_ander, gebruikersid_zelf]
         ).done(function (data) {
             document.getElementById("email").style.visibility = "visible";
-            document.getElementById("email").style.fontSize = "25px"
+            document.getElementById("email").style.fontSize = "100%"
             document.getElementById("email").innerText = gebruikersinfo.email;
         }).fail(function (reason) {
             console.log(reason)
