@@ -31,7 +31,5 @@ function leeftijdBerekenen(geboortedatumPar){
     if(heden.getMonth() < 0 || (heden.getMonth() === 0 && heden.getDate() < geboortedatum.getDate())){
         leeftijd--;
     }
-
     return leeftijd;
-
 }

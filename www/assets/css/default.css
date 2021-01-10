@@ -56,12 +56,14 @@ button:hover {
     float: left;
     margin-left: 5%;
     margin-top: 12.5%;
+    cursor: pointer;
 }
 .right-banner {
     width: 7.5%;
     margin-top: 12.5%;
     float: right;
     margin-right: 5%;
+    cursor: pointer;
 }
 div.middleBox {
     background-color: white;

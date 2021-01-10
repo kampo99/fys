@@ -17,6 +17,7 @@
     margin-left: auto;
     margin-right: auto;
     display: none;
+    cursor: pointer;
 }
 .CorendonLogo {
     height: 25%;
@@ -25,4 +26,5 @@
     margin-right: auto;
     display: none;
     margin-top: 1%;
+    cursor: pointer;
 }
