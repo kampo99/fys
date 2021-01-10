@@ -2,6 +2,11 @@ window.onload = function(){
     var session = FYSCloud.Session.get();
     var accounts = session.matchaccounts;
 
+    //check als de persoon terug gestuurd wordt als die geweigerd is
+    if(FYSCloud.URL.queryString("geweigerd") == "true"){
+        document.getElementsByClassName("feedbackTekst")[0].innerHTML = "U kunt geen geweigerde profielen bezoeken!";
+    }
+
     document.getElementById("headerText").innerHTML += " " + session.bestemming;
 
     //Haal alle duplicate mensen uit de lijst
