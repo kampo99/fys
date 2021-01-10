@@ -36,6 +36,18 @@ button:hover {
     border: 0px;
     border-right: 2px solid #000;
 }
+.UitloggenKnop{
+    width: 20%;
+    padding: 0.5% 1%;
+    display: inline-block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    height: 100%;
+    font-size: 30px;
+    border: 0px;
+    border-left: 2px solid #000;
+}
 .left-banner {
     width: 7.5%;
     float: left;
