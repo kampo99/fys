@@ -21,3 +21,17 @@ function geefFeedback(feedbackObject,feedbackTekst,overleefTijd) {
 function verwijderFeedback(feedback){
     feedback.innerText = "";
 }
+function leeftijdBerekenen(geboortedatumPar){
+    var geboortedatum = new Date(geboortedatumPar);
+    var geboortejaar = geboortedatum.getFullYear();
+    var heden = new Date();
+    var hedenJaar = heden.getFullYear();
+    var leeftijd = hedenJaar - geboortejaar;
+
+    if(heden.getMonth() < 0 || (heden.getMonth() === 0 && heden.getDate() < geboortedatum.getDate())){
+        leeftijd--;
+    }
+
+    return leeftijd;
+
+}
