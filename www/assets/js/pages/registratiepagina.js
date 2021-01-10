@@ -15,12 +15,13 @@ window.onload = function(){
           }
 
       }
-
+        //Wanneer het wachtwoord niet correct is ingevuld in de value herhaalwachtwoord komt er een melding.
         if (wachtwoordbtn.value != herhaalWachtwoord.value ){
             const feedbackObject = document.getElementById('feedback');
             geefFeedback(feedbackObject,"Wachtwoord komt niet overeen",5000);
             return;
         }
+
 
         var emailInput = document.getElementById("emailbtn").value; //id word verbonden met het atribuut
         var passwordInput = document.getElementById("wachtwoordbtn").value; //id word verbonden met het atribuut
@@ -30,19 +31,20 @@ window.onload = function(){
         var geboortedatumInput = document.getElementById("geboortedatum").value; //id word verbonden met het atribuut
 
 
-        //database atribturen worden opgehaald.
+
         FYSCloud.API.queryDatabase(
             "SELECT * FROM profiel WHERE email =?",
             [emailInput]
         ).done(function (data) {
 
+            //Wanneer de account al bestaat krijgt de klant een bericht hierover.
             console.log(data);
             if (data.length > 0){
                 const feedbackObject = document.getElementById('feedback');
                 geefFeedback(feedbackObject,"De email bestaat al, probeer een andere.",5000);
                 return;
             }
-
+            //de invoervelding die de gebruiker heeft ingevoerd worden naar de database verstuurd.
             FYSCloud.API.queryDatabase(
                 "INSERT INTO `profiel` (`wachtwoord`,`voornaam`,`achternaam`, `email`, `geslacht`, `geboortedatum` ) VALUES (?, ?, ?, ?, ?, ?)",
                 [passwordInput, voornaamInput, achternaamInput, emailInput, geslachtInput, geboortedatumInput]

@@ -1,32 +1,14 @@
-.HomeButton{
-    width: 20%;
-    padding: 0.5% 1%;
-    display: inline-block;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    height: 100%;
-    font-size: 30px;
-}
 .VragenlijstKnop{
     width: 20%;
     padding: 0.5% 1%;
     display: inline-block;
     position: absolute;
-    right: 0%;
-    top: 0%;
+    right: 0;
+    top: 0;
     height: 100%;
-    font-size: 30px;
-    border: 0px;
+    font-size: 187.5%;
+    border: 0;
     border-left: 2px solid #000;
-}
-.middleBox .main{
-    padding: 0 10px;
-    padding-top: 15%;
-}
-.middleBox .container{
-    max-width: 1000px;
-    padding-right: 5%;
 }
 .resultatenBox{
     position: fixed;
@@ -34,7 +16,7 @@
     margin-top: 5%;
     width: 95%;
     overflow-y: scroll;
-    height: 450px;
+    height: 60%;
 }
 .ProfielTabblad{
     background: #d81e05;
@@ -51,7 +33,7 @@
     padding-left: 2%;
     padding-right: 0.5%;
     color: white;
-    font-size: 20px;
+    font-size: 125%;
     margin-top: 1%;
     margin-bottom:4%;
 }
@@ -69,7 +51,7 @@
     transition: all 0.4s ease 0s;
 }
 .feedbackTekst{
-    font-size: 28px;
+    font-size: 175%;
     font-weight: bold;
     color: red;
     margin-top: 2%;
