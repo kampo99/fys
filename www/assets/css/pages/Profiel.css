@@ -21,7 +21,7 @@
     height: 8%;
 }
 
-.profielfotobox {
+.profielFotoBox {
     display: block;
     position: absolute;
     margin-left: auto;
@@ -35,17 +35,16 @@
     border: 2px solid black;
 }
 
-#profielfoto {
+#profielFoto {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
-
 }
 
-.biohoofd {
+.bioHoofd {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -64,7 +63,7 @@
     background-color: #D81E05;
 }
 
-.biosub {
+.bioInhoud {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -104,6 +103,9 @@
     right: 0;
     height: 100%;
     font-size: 30px;
+    border: none;
+    border-left: 2px solid black;
+
 }
 
 .aanvraag {
@@ -190,7 +192,7 @@
 }
 
 
-.containerVragen {
+.plekVragen {
     position: fixed;
     right: 5%;
     left: 5%;
@@ -202,7 +204,7 @@
     border-style: solid;
 }
 
-.vraagtekst {
+.vraagTekst {
     margin-left: 2%;
     text-align: left;
     text-decoration: none;

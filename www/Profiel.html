@@ -4,78 +4,94 @@
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/pages/Profiel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="assets/vendors.jquery/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.fys.cloud/fyscloud/0.0.3/fyscloud.min.js"></script>
     <script src="assets/js/config.js"></script>
     <script src="assets/js/pages/Profiel.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
+
+<!-- dit is de template voor het aantal intressen -->
 <script type="text/html" id="templatevraag">
-    <div class="vraagtekst"></div>
+    <div class="vraagTekst"></div>
 </script>
 
 <body>
+
+<!-- dit is de witte box waar alles in zit -->
 <div class="middleBox">
-    <div id="naam">
 
+    <!-- hier wordt de naam laten zien -->
+    <div id="naam"></div>
+
+    <!--dit is de profiel foto als de gebruiker geen profiel foto heeft krijgt hij een standaard
+    en als die vaalt in te laden staat er foto -->
+    <div class="profielFotoBox">
+        <img id="profielFoto" src="https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd" alt="foto"/>
     </div>
 
-    <div class="profielfotobox">
-        <img id="profielfoto" src="https://qph.fs.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd" alt="foto"/>
-    </div>
+    <!-- hier wordt de intressen container gemaakt -->
+    <div class="plekVragen"></div>
 
-    <div class="containerVragen">
-
-    </div>
-
-    <div class="biohoofd">
+    <!-- hier wordt gezegd dat hier de bio is -->
+    <div class="bioHoofd">
         Bio van Persoon:
     </div>
 
-    <div class="biosub" id="biosub">
+    <!-- hier in wordt de bio ingevuld door de databases -->
+    <div class="bioInhoud" id="bioInhoud"></div>
 
-    </div>
-
+    <!-- hier wordt gezegd dat hier de intressen zijn -->
     <div class="intressen">
         Interesse:
     </div>
 
+    <!-- dit is de accepteer knop om een match te accepteren -->
     <button class="accepteer" id="accepteer">
         Accepteer
     </button>
 
+    <!-- dit is de wijsaf knop om een match te afwijzen -->
     <button class="wijsaf" id="wijsaf">
         Wijs af
     </button>
 
+    <!-- wanner de match geaccepteerd is wordt de email laten zien door dit -->
     <div id="email">
-        <h5>
-
-        </h5>
+        <h5></h5>
     </div>
 
-    <button class="aanvraag" id="aanvraagbutton">
+    <!-- dit is de knop om een aanvraag te doen -->
+    <button class="aanvraag" id="aanvraagknop">
         <h3>
             Match aanvraag
         </h3>
     </button>
 
-    <div class="info" id="boxtext">
+    <!-- als je een verzoek doet gaat de knop weg en komt de status van de match er te staan en dat komt door dit -->
+    <div class="info" id="statusTekst">
         <h3>
             In afwachting
         </h3>
     </div>
 
-
+    <!-- hier wordt de header gemaakt -->
     <div class="headerBox">
+
+        <!-- dit is de knop om terug te gaan naar de andere matches -->
         <form action="matchesresultaten.html">
             <button class="sluiten">Sluiten</button>
         </form>
+
+        <!-- dit is de knop om terug te gaan naar het begin scherm -->
         <button class="HomeButton" id="HomeButton">Home</button>
+
+        <!-- hier wordt gezegd dat je op een profiel pagina bent -->
         <div id="headerText">Profiel</div>
     </div>
 </div>
+
+<!-- dit zijn de banners links en rechts met een link naar corendon -->
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerLeft" class="left-banner"
      onclick="window.open('https://www.corendon.nl')">
 <img src="http://images.corendon.nl/NL/hpto/homepage/Curacao-weken-140x350.png" alt="BannerRight" class="right-banner"
