@@ -188,7 +188,9 @@ window.onload = function () {
                 break;
             case match.status = 'geweigerd':
                 //als de status geweigerd is wordt je gelijk terug gestuurd naar de andere matches
-                FYSCloud.URL.redirect("matchesresultaten.html")
+                FYSCloud.URL.redirect("matchesresultaten.html", {
+                    geweigerd: true
+                });
                 break;
         }
     }
@@ -215,7 +217,11 @@ window.onload = function () {
             "UPDATE `match` SET `status` = ? WHERE `sender_Profiel_gebruikersid` = ? AND reciever_id = ?",
             ["geweigerd", gebruikersid_ander, gebruikersid_zelf]
         ).done(function (data) {
-            FYSCloud.URL.redirect("matchesresultaten.html")
+            FYSCloud.URL.redirect("matchesresultaten.html", {
+                geweigerd: true
+            });
+
+
 
         }).fail(function (reason) {
             console.log(reason)
