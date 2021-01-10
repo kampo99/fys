@@ -2,7 +2,7 @@ input[type=checkbox] {
     transform: scale(1);
 }
 .PerfecteMatch {
-    font-size: 25px;
+    font-size: 156.25%;
     text-decoration: none;
     display: inline-block;
     right: 10%;
@@ -17,13 +17,13 @@ input[type=checkbox] {
     left: 10%;
     bottom: 5%;
     position: fixed;
-    font-size: 25px;
+    font-size: 156.25%;
     width: 30%;
     height: 10%;
 }
 .label {
     color: black;
-    font-size: 22px;
+    font-size: 137.5%;
     font-weight: bold;
 }
 .vragenlijstBox {
@@ -35,14 +35,14 @@ input[type=checkbox] {
     flex: 1;
 }
 #VragenlijstTitel {
-    font-size: 28px;
+    font-size: 175%;
     font-weight: bold;
     color: black;
     margin-top: 1%;
     margin-left: 2%;
 }
 #VragenLijstDebug {
-    font-size: 20px;
+    font-size: 125%;
     font-weight: bold;
     color: red;
     margin-top: 0.5%;
