@@ -42,7 +42,7 @@ window.onload = function(){
 
                 // elke onclick function wordt geredirect naar de aangewezen url pagina.
                 profielTemplate.getElementsByClassName("BekijkProfiel")[0].onclick = function() {
-                    FYSCloud.URL.redirect("Profiel.html", {
+                    FYSCloud.URL.redirect("profiel.html", {
                         id: gebruiker.gebruikersid
                     });
                 }
