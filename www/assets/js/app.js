@@ -5,7 +5,7 @@ $(document).ready(function() {
     });
     //De onclick functie van de profiel knop
     $("#ProfielButton").click(function() {
-        FYSCloud.URL.redirect("EditableProfile.html");
+        FYSCloud.URL.redirect("editableprofile.html");
     });
     //De onclick functie van de uitlog knop
     $("#UitloggenKnop").click(function() {
