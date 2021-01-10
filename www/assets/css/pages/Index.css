@@ -10,6 +10,7 @@ input[type=text], input[type=password] {
     background: #f1f1f1;
 }
 
+
 .center {
     display: block;
     margin-top: 0;
@@ -41,7 +42,7 @@ hr {
     height: 50%;
 }
 /*signupbtn hoogte en breedte */
-.registerbtn {
+.registeerbtn {
     float: left;
     width: 100%;
     height: 50%;
