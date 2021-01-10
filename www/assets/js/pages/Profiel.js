@@ -32,9 +32,10 @@ window.onload = function () {
         //dit is een variable om de data op te slaan
         gebruikersinfo = data[0]
 
-        //hier wordt er gekeken wat de naam is en ook gelijk veranderd op de website
-        var helenaam = data[0].voornaam + " " + data[0].achternaam;
-        document.getElementById('naam').textContent = helenaam;
+        //hier wordt er gekeken wat de naam/leeftijd/geslacht is en ook gelijk veranderd op de website
+        var leeftijd = leeftijdBerekenen(gebruikersinfo.geboortedatum);
+        var gebruikerInfoString = gebruikersinfo.voornaam + " " + gebruikersinfo.achternaam + " | " + gebruikersinfo.geslacht + " | " + leeftijd + " jaar ";
+        document.getElementById('naam').textContent = gebruikerInfoString;
 
         //hier wordt er gekeken als er een profielfoto is in de database is zoja dan wordt die gebruikt
         if (data[0].foto != null) {
@@ -220,7 +221,6 @@ window.onload = function () {
             FYSCloud.URL.redirect("matchesresultaten.html", {
                 geweigerd: true
             });
-
 
 
         }).fail(function (reason) {
